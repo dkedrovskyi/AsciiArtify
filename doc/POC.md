@@ -9,7 +9,6 @@ In our POC, we will follow a **"one application – one cluster"** approach, mea
 
 ## Installation Procedure
 
-```bash
 # Create cluster
 k3d cluster create argo
 
@@ -31,13 +30,14 @@ kubectl -n argocd get secret argocd-initial-admin-secret \
 kubectl -n argocd get secret argocd-initial-admin-secret \
   -o jsonpath="{.data.password}" | base64 -d; echo
 
+---
 
 [![asciicast](https://asciinema.org/a/y3OBD47uK0y7fMPLeFa5weWpO.svg)](https://asciinema.org/a/y3OBD47uK0y7fMPLeFa5weWpO)
 
-###
-login to via browser https://127.0.0.1:8080 (accept not secure connection, for production systems install a proper TLS certificate)
+## Create application
 
-###
+Login to via browser https://127.0.0.1:8080 (accept not secure connection, for production systems install a proper TLS certificate)
+ 
 Press + NEW APP
 Application name: demo
 Project name: default
@@ -56,11 +56,13 @@ AUTO-CREATE NAMESPACE should be enabled
 
 Press CREATE
 
-###
+## Synchronize
 
 To Synchonize press SYNC - SYNCHRONIZE
 
-###
+---
+
+## Changing configuration 
 On the next step 
 We change some configuration in 
 https://github.com/dkedrovskyi/go-demo-app/blob/main/helm/values.yaml
