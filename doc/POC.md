@@ -41,18 +41,18 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 - Project name: default
 - Sync Policy: Manual
 
-# SOURCE:
+### SOURCE:
 - Type: GIT 
 - Repository URL: https://github.com/dkedrovskyi/go-demo-app
 - Path: Helm 
 
-# DESTINATION:
+### DESTINATION:
 - Cluster Url: https://kubernetes.default.svc
 - Namespace: demo 
 - AUTO-CREATE NAMESPACE should be enabled 
 - Press CREATE
 
-## Synchronize
+### Synchronize
 
 To Synchonize press SYNC - SYNCHRONIZE
 
