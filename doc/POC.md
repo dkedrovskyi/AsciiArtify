@@ -56,6 +56,10 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 To Synchonize press SYNC - SYNCHRONIZE
 
+![Config1](images/1.png)
+![Config2](images/2.png)
+![Demo app](images/3.png)
+
 ---
 
 ## Changing configuration 
